@@ -1,11 +1,16 @@
 cd /path/to/k8s/
 docker build -t sergkritsa/posts ..\..\posts\
 docker build -t sergkritsa/event-bus ..\..\event-bus\
+docker build -t sergkritsa/comments ..\..\comments\
+docker build -t sergkritsa/query ..\..\query\
+docker build -t sergkritsa/moderation ..\..\moderation\
 
 ls
 kubectl apply -f .\event-bus-depl.yaml
 kubectl apply -f .\posts-depl.yaml
-
+kubectl apply -f .\comments-depl.yaml
+kubectl apply -f .\moderation-depl.yaml
+kubectl apply -f .\query-depl.yaml
 kubectl get services
 > port:PORT_TO_USE_IN_URL
 curl localhost:PORT_TO_USE_IN_URL/posts
