@@ -19,6 +19,16 @@ docker build -t sergkritsa/posts:0.0.2 .
 * kubectl get pods
 * kubectl logs pods_name
 
+## needs to remove version of image (after semicolon, lattest by default)  in config_file
+## Updating deployment. way w/ pulling image from DockerHub
+* make an update to code
+* rebuild image w/ newer version
+docker build -t sergkritsa/posts .
+* docker push sergkritsa/posts
+* kubectl get deployments
+* kubectl rollout restart deployment deployment_name
+* kubectl get pods
+* kubectl logs pods_name
 
 ## Useful commands
 kubectl get deployments
