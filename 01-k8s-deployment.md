@@ -1,3 +1,8 @@
+# Enable K8s
+Docker Desktop > Settings > Kubernetes
+    v'Enable Kubernetes' > +'Apply & Restart'
+
+## Apply config
 cd /path/to/Dockerfile/
 ls
 docker build -t sergkritsa/posts:0.0.1 .
