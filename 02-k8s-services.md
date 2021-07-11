@@ -15,8 +15,18 @@ kubectl get services
 > port:PORT_TO_USE_IN_URL
 curl localhost:PORT_TO_USE_IN_URL/posts
 
+kubectl apply -f .\ingress-nginx.yaml
+in `C:\Windows\System32\drivers\etc\hosts` or `/etc/hosts` add `127.0.0.1 posts.com`
+curl posts.com/posts
+
 ## Useful commands
 kubectl delete service service_name
 kubectl describe service service_name
 kubectl delete deployment service_name
 minikube ip
+
+## To determine what might be using this port, run:
+* macOS / Linux
+sudo lsof -i tcp:80
+*Windows:
+netstat -aon | findstr :80
