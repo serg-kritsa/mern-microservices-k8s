@@ -38,6 +38,11 @@ docker build -t sergkritsa/client ..\..\client\
 
 kubectl apply -f .\event-bus-depl.yaml -f .\posts-depl.yaml -f .\comments-depl.yaml -f .\moderation-depl.yaml -f .\query-depl.yaml -f .\client-depl.yaml -f .\ingress-nginx.yaml
 
+## Skafold from Google
+* save the binary from `https://skaffold.dev/docs/install/` as `skaffold` in project root
+./skaffold version
+./skaffold dev
+
 ## Useful commands
 kubectl delete service service_name
 kubectl describe service service_name
