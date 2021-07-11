@@ -19,6 +19,25 @@ kubectl apply -f .\ingress-nginx.yaml
 in `C:\Windows\System32\drivers\etc\hosts` or `/etc/hosts` add `127.0.0.1 posts.com`
 curl posts.com/posts
 
+## Added support for client routes
+docker build -t sergkritsa/client ..\..\client\
+kubectl apply -f .\client-depl.yaml
+docker build -t sergkritsa/posts ..\..\posts\
+kubectl apply -f .\posts-depl.yaml
+kubectl apply -f .\ingress-nginx.yaml
+
+### Clean
+kubectl delete deployment client-depl comments-depl event-bus-depl moderation-depl posts-depl query-depl
+
+docker build -t sergkritsa/posts ..\..\posts\
+docker build -t sergkritsa/event-bus ..\..\event-bus\
+docker build -t sergkritsa/comments ..\..\comments\
+docker build -t sergkritsa/query ..\..\query\
+docker build -t sergkritsa/moderation ..\..\moderation\
+docker build -t sergkritsa/client ..\..\client\
+
+kubectl apply -f .\event-bus-depl.yaml -f .\posts-depl.yaml -f .\comments-depl.yaml -f .\moderation-depl.yaml -f .\query-depl.yaml -f .\client-depl.yaml -f .\ingress-nginx.yaml
+
 ## Useful commands
 kubectl delete service service_name
 kubectl describe service service_name
