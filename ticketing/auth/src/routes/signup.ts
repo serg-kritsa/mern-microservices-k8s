@@ -43,7 +43,7 @@ router.post(
         id: user.id,
         email: user.email
       },
-      "asdf"
+      process.env.JWT_KEY! // !  turns off check if env variable exists 
     );
 
     // Store it on session object

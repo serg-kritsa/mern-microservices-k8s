@@ -33,6 +33,11 @@ app.all("*", async (req: Request, res: Response) => {
 app.use(errorHandler);
 
 const start = async () => {
+  // check env variable during init
+  if (!process.env.JWT_KEY) {
+    throw new Error("JWT_KEY must be defined");
+  }
+
   try {
     await mongoose.connect("mongodb://auth-mongo-srv:27017/auth", {
       useNewUrlParser: true,
