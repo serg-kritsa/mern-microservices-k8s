@@ -17,3 +17,7 @@ kubectl delete pods client-depl-###
 (2nd terminal) cd ./ticketing/client
 (2nd terminal) npm i bootstrap@5.0.1
 (1nd terminal) skaffold will rebuild image
+
+(2nd terminal) cd ./ticketing/client
+(2nd terminal) npm i axios@0.21.1
+(1nd terminal) skaffold will rebuild image
