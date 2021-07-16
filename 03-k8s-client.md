@@ -9,3 +9,8 @@ kubectl create secret generic jwt-secret --from-literal=JWT_KEY=asdf
 curl ticketing.dev
 to pass `net::ERR_CERT_AUTHORITY_INVALID` warning it's need to type `thisisunsafe`
 curl ticketing.dev/banana
+
+### force recreation if needed for watch mode
+kubectl get pods
+kubectl delete pods client-depl-###
+
