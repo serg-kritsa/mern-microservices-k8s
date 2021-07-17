@@ -18,3 +18,10 @@ npm init -y
 add `@sknn/` to package name
 npm login
 npm publish --access public
+
+## ts init config
+tsc --init
+npm i typescript del-cli --save-dev
+tsconfig.json > compilerOptions: "declaration": true, "outDir": "./build"
+npm run build
+
