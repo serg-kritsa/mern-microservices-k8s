@@ -25,3 +25,6 @@ npm i typescript del-cli --save-dev
 tsconfig.json > compilerOptions: "declaration": true, "outDir": "./build"
 npm run build
 
+### build project
+>>> npm i -g typescript ts-node
+./node_modules/.bin/tsc && npm version patch && npm publish
