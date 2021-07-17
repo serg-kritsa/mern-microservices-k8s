@@ -21,3 +21,7 @@ kubectl delete pods client-depl-###
 (2nd terminal) cd ./ticketing/client
 (2nd terminal) npm i axios@0.21.1
 (1nd terminal) skaffold will rebuild image
+
+kubectl get namespace
+kubectl get services -n ingress-nginx
+`http://ingress-nginx.ingress-nginx.svc.cluster.local`
