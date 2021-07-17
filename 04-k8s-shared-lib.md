@@ -9,3 +9,12 @@ Name='some_name'
 * skipping invitation to
 'Invite some interesting people to'
 +'Skip'
+
+## creating package
+cd /path/to/ticketing
+mkdir common
+cd common
+npm init -y
+add `@sknn/` to package name
+npm login
+npm publish --access public
