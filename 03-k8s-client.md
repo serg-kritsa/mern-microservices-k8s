@@ -25,3 +25,7 @@ kubectl delete pods client-depl-###
 kubectl get namespace
 kubectl get services -n ingress-nginx
 `http://ingress-nginx.ingress-nginx.svc.cluster.local`
+
+clear cookie 
+F12 > |Application| > 
+    'Storage' > +'Cookie' > click on hostname in list > +'x' icon w/ 'Clear all' title above table  
