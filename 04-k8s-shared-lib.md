@@ -28,3 +28,14 @@ npm run build
 ### build project
 >>> npm i -g typescript ts-node
 ./node_modules/.bin/tsc && npm version patch && npm publish
+
+cd ticketing/auth
+npm i @sknn/common
+
+### make sure that updated package is in use
+if newer version was published, run `npm update @sknn/common`
+skaffold will rebuild image
+kubectl get pods
+kubectl exec -it pod_name sh
+cd node_modules/@sknn/common
+cat package.json | grep '@sknn/common@'
