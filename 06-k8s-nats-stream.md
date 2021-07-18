@@ -12,3 +12,5 @@
 (3.1 terminal) npm run publish
 (3.2 terminal) npm run listen
 (3.1 terminal) type `rs` + ENTER
+
+only one service in qeueu group will receive an event data
