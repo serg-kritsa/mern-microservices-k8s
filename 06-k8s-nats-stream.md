@@ -14,3 +14,5 @@
 (3.1 terminal) type `rs` + ENTER
 
 only one service in qeueu group will receive an event data
+
+message will be sent member of qeueu group every 30 sec. until receiving acknowlwdge w/ .ack()
