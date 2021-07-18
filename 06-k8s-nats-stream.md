@@ -16,3 +16,13 @@
 only one service in qeueu group will receive an event data
 
 message will be sent member of qeueu group every 30 sec. until receiving acknowlwdge w/ .ack()
+
+(2.2 terminal) kubectl port-forward nats_depl_name 8222:8222
+open in browser `localhost:8222/streaming`
+channel subscriptions `http://localhost:8222/streaming/channelsz?subs=1` 
+if client is offline, message will be delivered later
+
+container args in delpoyment file 
+-hbi' - how often server sends hard bit to its client
+'-hbt' - how long each client has to respond
+'-hbf' - times that each client can fail before server is going to assume that the connection is dead and gone
