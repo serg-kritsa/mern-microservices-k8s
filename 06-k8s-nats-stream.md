@@ -3,3 +3,7 @@
 
 .\skaffold dev
 (2nd terminal) kubectl get pods
+
+[https://www.npmjs.com/package/node-nats-streaming]
+cd /path/to/nats-test
+npm i
