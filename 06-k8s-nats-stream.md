@@ -26,3 +26,9 @@ container args in delpoyment file
 -hbi' - how often server sends hard bit to its client
 '-hbt' - how long each client has to respond
 '-hbf' - times that each client can fail before server is going to assume that the connection is dead and gone
+
+.setDeliverAllAvailable()               deliver all sent messages before after restarting client
+## 3 props together make desirable behavior
+.setDeliverAllAvailable()               deliver all sent messages before only 1st time
+.setDurableName('accounting-service');  deliver all for durable subscription. don't sent processed messages after restarting client
+'queue-group-name',                     don't loose messages after temporarily client disconnect
