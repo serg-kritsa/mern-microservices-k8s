@@ -32,3 +32,7 @@ container args in delpoyment file
 .setDeliverAllAvailable()               deliver all sent messages before only 1st time
 .setDurableName('accounting-service');  deliver all for durable subscription. don't sent processed messages after restarting client
 'queue-group-name',                     don't loose messages after temporarily client disconnect
+
+## cleaning emitted events by restarting nats 
+kubectl get pods
+kubectl delete pods pod_name
