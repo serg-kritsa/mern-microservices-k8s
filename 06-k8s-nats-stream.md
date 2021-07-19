@@ -36,3 +36,13 @@ container args in delpoyment file
 ## cleaning emitted events by restarting nats 
 kubectl get pods
 kubectl delete pods nats_pod_name
+
+## testing nats publisher
+.\skaffold dev
+(2nd terminal) `kubectl get pods` to make sure that nats is up and running
+(2nd terminal) kubectl port-forward nats_depl_name 4222:4222
+(3rd terminal) cd /path/to/nats-test
+(3rd terminal) npm run listen
+POST https://ticketing.dev/api/users/signup             {"email": "q@q.qq","password": "qqqq"}
+GET  https://ticketing.dev/api/users/currentuser
+POST https://ticketing.dev/api/tickets/                 {"title": "Q","price": 10}
