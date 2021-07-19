@@ -35,4 +35,4 @@ container args in delpoyment file
 
 ## cleaning emitted events by restarting nats 
 kubectl get pods
-kubectl delete pods pod_name
+kubectl delete pods nats_pod_name
