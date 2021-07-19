@@ -32,6 +32,12 @@ npm run build
 cd ticketing/auth
 npm i @sknn/common
 
+## rebuild & publish common package
+cd /path/to/ticketing/common
+npm run pub
+cd /path/to/ticketing/tickets
+npm update @sknn/common
+
 ### make sure that updated package is in use
 if newer version was published, run `npm update @sknn/common`
 skaffold will rebuild image
