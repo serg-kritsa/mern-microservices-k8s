@@ -45,3 +45,11 @@ kubectl get pods
 kubectl exec -it pod_name sh
 cd node_modules/@sknn/common
 cat package.json | grep '@sknn/common@'
+
+## steps for updating common package
+ticketing\common
+npm run pub
+cd ../tickets
+npm update @sknn/common
+cd ../orders
+npm update @sknn/common
