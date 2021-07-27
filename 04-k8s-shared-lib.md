@@ -59,3 +59,6 @@ ticketing\common
 npm run pub
 cd ../expiration
 npm update @sknn/common
+
+cd ../orders
+npm update @sknn/common
