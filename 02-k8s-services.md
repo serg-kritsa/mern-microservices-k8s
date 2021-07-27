@@ -54,3 +54,8 @@ minikube ip
 sudo lsof -i tcp:80
 *Windows:
 netstat -aon | findstr :80
+
+cd /path/to/k8s/
+docker build -t sergkritsa/expiration ..\..\expiration\
+cd ../..
+./skaffold dev
