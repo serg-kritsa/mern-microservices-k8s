@@ -53,3 +53,9 @@ cd ../tickets
 npm update @sknn/common
 cd ../orders
 npm update @sknn/common
+
+## steps for updating common package
+ticketing\common
+npm run pub
+cd ../expiration
+npm update @sknn/common
