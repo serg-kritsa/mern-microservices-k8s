@@ -59,3 +59,8 @@ cd /path/to/k8s/
 docker build -t sergkritsa/expiration ..\..\expiration\
 cd ../..
 ./skaffold dev
+
+cd /path/to/k8s/
+docker build -t sergkritsa/payments ..\..\payments\
+cd ../..
+./skaffold dev
