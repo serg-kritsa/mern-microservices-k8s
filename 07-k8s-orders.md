@@ -41,3 +41,10 @@ POST https://ticketing.dev/api/users/signup             {"email": "q@q.qq","pass
 GET  https://ticketing.dev/api/users/currentuser
 POST https://ticketing.dev/api/tickets/                 {"title": "Q","price": 10}
 POST https://ticketing.dev/api/orders/                 {"ticketId": "use_ticket_id_from_previous_response"}
+
+
+POST https://ticketing.dev/api/users/signup             {"email": "q@q.qq","password": "qqqq"}
+GET  https://ticketing.dev/api/users/currentuser
+POST https://ticketing.dev/api/tickets/                 {"title": "Q","price": 10}
+POST https://ticketing.dev/api/orders/                 {"ticketId": "use_ticket_id_from_previous_response"}
+POST https://ticketing.dev/api/payments/                 {"token": "tok_visa", "orderId": "use_order_id_from_previous_response"}
