@@ -62,3 +62,12 @@ npm update @sknn/common
 
 cd ../orders
 npm update @sknn/common
+
+ticketing\common
+npm run pub
+cd ../payments
+npm update @sknn/common
+cd ../orders
+npm update @sknn/common
+cd ../tickets
+npm update @sknn/common
