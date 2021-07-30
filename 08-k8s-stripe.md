@@ -11,3 +11,8 @@ left hand side column
 kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=secret-key
 kubectl get secrets
 
+https://stripe.com/docs/testing
+NUMBER	            BRAND	CVC	            DATE
+4242424242424242	Visa	Any 3 digits	Any future date
+
+use token.id from response callback
