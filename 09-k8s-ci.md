@@ -95,3 +95,14 @@ deploy-manifests on: push
 
 ## future development workflow
 new changes in dev branch > push > pull request > accept > deployment to cloud
+
+# deleting LoadBalancer which costs 10$/month. should be deleted if unused
+Dashboard > +'Networking' >
+    |Load Balancers| > 
+    LoadBalancer ROW > +'More V' > 'Destroy'
+# deleting Kubernates which costs 30$/month. should be deleted if unused
+Dashboard > +'Kubernates' >
+    'Kubernates Clusters' > 
+    Cluster ROW > +'More V' > 'Destroy'
+
+
