@@ -18,6 +18,9 @@ API >
     'Applications & API' > |Tokens/Keys| > +'Generate New Token'
         'Token Name'='my_token_name' > +'Generate Token'
             copy generated token
+    'Applications & API' > |Tokens/Keys| > +'Generate New Token'
+        'Token Name'='my_github_token_name' > +'Generate Token'
+            copy generated token
 doctl auth init my_generated_token 
 
 ### Switching to cloud context
@@ -40,3 +43,9 @@ github.com/user_name/repo_name/settings/secrets
         'Name'='DOCKER_USERNAME' > 'Value'='docker_username' > +'Add secret'
     +'Add a new secret' > 
         'Name'='DOCKER_PASSWORD' > 'Value'='docker_password' > +'Add secret'
+    +'Add a new secret' > 
+        'Name'='DIGITALOCEAN_ACCESS_TOKEN' > 'Value'='my_github_token_name' > +'Add secret'
+
+
+
+        
