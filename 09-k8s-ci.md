@@ -51,3 +51,8 @@ kubectl config view
 kubectl config use-context cloud_context_name
 kubectl create secret generic jwt-secret --from-literal JWT_KEY=secret-key
 kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=secret-key
+[https://kubernetes.github.io/ingress-nginx/deploy/#digital-ocean]
+k8s-dev & k8s-prod should be committed to master branch directly w/o pull request
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.48.1/deploy/static/provider/do/deploy.yaml
+kubectl get pods
+kubectl logs pod_name
