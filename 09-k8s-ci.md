@@ -46,6 +46,8 @@ github.com/user_name/repo_name/settings/secrets
     +'Add a new secret' > 
         'Name'='DIGITALOCEAN_ACCESS_TOKEN' > 'Value'='my_github_token_name' > +'Add secret'
 
-
-
-        
+### in cloud context
+kubectl config view
+kubectl config use-context cloud_context_name
+kubectl create secret generic jwt-secret --from-literal JWT_KEY=secret-key
+kubectl create secret generic stripe-secret --from-literal STRIPE_KEY=secret-key
