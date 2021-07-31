@@ -56,3 +56,5 @@ k8s-dev & k8s-prod should be committed to master branch directly w/o pull reques
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.48.1/deploy/static/provider/do/deploy.yaml
 kubectl get pods
 kubectl logs pod_name
+
+changes should be committed to master branch directly w/o pull request
