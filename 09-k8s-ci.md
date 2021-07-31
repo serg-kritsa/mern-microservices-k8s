@@ -58,3 +58,40 @@ kubectl get pods
 kubectl logs pod_name
 
 changes should be committed to master branch directly w/o pull request
+
+### troublechooting if one of the pods is not running
+kubectl get pods
+kubectl describe pod pod_name
+kubectl logs pod_name
+
+## Cloud LoadBalancer
+
+## Purchase domain name
+Dashboard > +'Networking' >
+    |Load Balancers| > click on one of them >
+        copy LoadBalancer IP
+        |Droplets|Graphs|Settings
+### setup domain name
+set DNS server to custom DNS in domains provider dashboard
+- ns1.digitalocean.com
+- ns2.digitalocean.com
+- ns3.digitalocean.com
+### setup domain name
+Dashboard > +'Networking' >
+    |Domains| > 'Add a domain' > 'Enter doamin'='bought.domainname' > +'Add Domain'
+    'Create new record' > 
+    |A|
+    'HOSTNAME'='@' > 'WILL DIRECT TO'='LoadBalancer name' > 'TTL'='30' > +'Create Record'
+    |CNAME|
+    'HOSTNAME'='www' > 'IS AN ALIAS OF'='@' > 'TTL'='30' > +'Create Record'
+
+https://github.com/digitalocean/digitalocean-cloud-controller-manager/blob/master/docs/controllers/services/examples/README.md#accessing-pods-over-a-managed-load-balancer-from-inside-the-cluster
+
+
+github.com/user_name/repo_name
+|Actions|
+deploy-manifests on: push
+    build
+
+## future development workflow
+new changes in dev branch > push > pull request > accept > deployment to cloud
