@@ -35,3 +35,8 @@ kubectl config view
 kubectl config use-context docker-desktop
 
 
+github.com/user_name/repo_name/settings/secrets
+    +'Add a new secret' > 
+        'Name'='DOCKER_USERNAME' > 'Value'='docker_username' > +'Add secret'
+    +'Add a new secret' > 
+        'Name'='DOCKER_PASSWORD' > 'Value'='docker_password' > +'Add secret'
