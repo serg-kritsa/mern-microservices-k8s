@@ -105,4 +105,9 @@ Dashboard > +'Kubernates' >
     'Kubernates Clusters' > 
     Cluster ROW > +'More V' > 'Destroy'
 
+service Dockerfile for prod
+node index.ts
+client Dockerfile for prod
+npm run build
+
 
