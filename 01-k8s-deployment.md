@@ -39,3 +39,10 @@ docker build -t sergkritsa/posts .
 kubectl get deployments
 kubectl describe deployment deployment_name
 kubectl delete deployment deployment_name
+
+### access to Mongo shell inside running pod
+kubectl get pods
+kubectl exec -it <pod name> mongo
+dbs;
+use <db name>;
+<db name>.find({ <field>: <value>}).length();

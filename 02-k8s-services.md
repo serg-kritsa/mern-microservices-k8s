@@ -42,7 +42,8 @@ kubectl apply -f .\event-bus-depl.yaml -f .\posts-depl.yaml -f .\comments-depl.y
 * save the binary from `https://skaffold.dev/docs/install/` as `skaffold` in project root
 ./skaffold version
 ./skaffold dev
-
+### NODE.TS --poll: restart dev server if it doesn't start automatically inside skaffold
+ts-node-dev --poll src/index.ts
 ## Useful commands
 kubectl delete service service_name
 kubectl describe service service_name
