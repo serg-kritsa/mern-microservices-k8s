@@ -6,7 +6,7 @@ deploy:
       - ./infra/k8s/*
 build:
   local:
-    push: false
+    push: false # disable default behavior
   artifacts:
     # - image: image_name
     #   context: folder_name
